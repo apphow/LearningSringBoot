@@ -25,9 +25,10 @@ public class DemoApplication {
         // SPRING IS MANAGING THE CONSTRUCTION OF THE CONTROLLER
         MyController myController = (MyController) ctx.getBean("myController");
 
-        String greeting = MyController.sayHello();
+        System.out.println("..............Primary Bean");
+        System.out.println(myController.sayHello());
 
-        System.out.println(greeting);
+
 
         System.out.println("...........Property");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
