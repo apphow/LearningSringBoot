@@ -30,22 +30,23 @@ public class DemoApplication {
         System.out.println(greeting);
 
         System.out.println("...........Property");
-
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
-
         System.out.println(propertyInjectedController.getGreeting());
 
         System.out.println(".............Setter");
-
         SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
-
         System.out.println(setterInjectedController.getGreeting());
 
         System.out.println("...........Constructor");
-
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
-
         System.out.println(constructorInjectedController.getGreeting());
+
+        // currently we only have one implementation of the greeting service for our constructor, property and setter
+        // controllers, but what if we want the
+        // to inject a specific greeting service
+        // for the Setter and Property controllers.
+
+        //we can use the @Qualifier annotation
 
 
     }

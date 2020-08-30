@@ -1,10 +1,8 @@
 package com.example.demo.controllers;
 
-import com.example.demo.services.GreetingServiceImpl;
+import com.example.demo.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class ConstructorInjectedControllerTest {
 
@@ -12,7 +10,7 @@ public class ConstructorInjectedControllerTest {
     @BeforeEach
     void setUp() {
 
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
 
     }
 
